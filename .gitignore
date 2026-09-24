@@ -2,4 +2,4 @@
 .terraform*
 .vscode
 bastion-key.pem
-
+Production-Grade-EKS-Microservices.code-workspace

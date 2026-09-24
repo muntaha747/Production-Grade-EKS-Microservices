@@ -53,7 +53,7 @@ module "bastion_host" {
 
   name          = "bastion-host"
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.micro"
+  instance_type = "t3.xlarge"
   key_name      = aws_key_pair.bastion_keypair.key_name
   monitoring    = true
 
@@ -62,6 +62,11 @@ module "bastion_host" {
 
   associate_public_ip_address = true
 
+  root_block_device = {
+    volume_size = 1000
+    volume_type = "gp3"
+    iops        = 10000
+  }
   tags = {
     Terraform   = "true"
     Environment = "dev"
