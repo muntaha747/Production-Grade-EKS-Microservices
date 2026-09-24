@@ -1,3 +1,5 @@
 *.terraform
 .terraform*
 .vscode
+bastion-key.pem
+
