@@ -3,3 +3,4 @@
 .vscode
 bastion-key.pem
 Production-Grade-EKS-Microservices.code-workspace
+.terraform.lock.hcl
