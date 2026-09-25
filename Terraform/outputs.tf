@@ -9,3 +9,12 @@ output "bastion_public_ip" {
 output "vpc_id" {
   value = module.vpc.vpc_id
 }
+
+output "devops_user_access_key_id" {
+  value = aws_iam_access_key.DevOps-User.id
+}
+
+output "devops_user_secret_access_key" {
+  value     = aws_iam_access_key.DevOps-User.secret
+  sensitive = true
+}

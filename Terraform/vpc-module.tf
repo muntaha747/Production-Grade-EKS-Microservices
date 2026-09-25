@@ -1,7 +1,7 @@
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
-  name = "my-vpc"
+  name = "EKS-VPC"
   cidr = "10.0.0.0/16"
 
   azs             = ["us-east-1a", "us-east-1b", "us-east-1c"]
@@ -24,3 +24,5 @@ module "vpc" {
   private_subnet_tags = {
   "kubernetes.io/role/internal-elb" = "1" }
 }
+
+  
