@@ -9,7 +9,7 @@ data "aws_ami" "ubuntu" {
 
   filter {
     name   = "name"
-    values = ["Jenkins-Ubunut-Image"]
+    values = ["Ubuntu-Bash-Scripting"]
   }
 
   filter {
